@@ -1,0 +1,117 @@
+html{
+    height: 100%;
+    overflow:auto;
+    overflow-x: hidden;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    height: 100%;
+}
+nav{
+    color: white;
+    font-weight: 300;
+    z-index: 1;
+    position: fixed;
+    width: 95vw;
+    height: 100px;
+}
+
+nav ul{
+    top: 0;
+    left: 0;
+    list-style: none;
+    display: flex;
+    height: 20px;
+    padding: 10px;
+    align-items: center;
+   
+    
+}
+nav li{
+    justify-content: left;
+    opacity: 30%;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.164);
+    display: flex;
+    background: rgba(0, 0, 0, 0.616);
+    border-radius: 20%;
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+    padding: 3px;
+    align-items: center;
+    justify-content: center;
+}
+nav li:hover{
+    opacity: 100%;
+    color: rgb(255, 255, 255);
+    background: rgb(80, 80, 80);
+}
+#before{
+    letter-spacing: 200%;
+    width: 80px;
+    border-radius: 5px;
+    height: 20px;
+}
+#home{
+    letter-spacing: 200%;
+    width: 80px;
+    border-radius: 5px;
+    height: 20px;
+}
+#goback{
+    margin-left: auto;
+}
+#back{
+    transform: rotate(180deg);
+    filter: invert();
+}
+
+.whole{
+    display: flex;
+    position: relative;
+    width: 100vw;
+    justify-content: center;
+}
+.mainwrap{
+    align-items: top;
+    width:1400px;
+    height:auto;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+.maincontiner{
+    top:0;
+    align-items: top;
+    display: flex;
+    position: relative;
+    height: fit-content;
+    /* width:1400px; */
+    justify-content: center;
+    padding-bottom: 100px;
+  
+}
+.메인{
+    position:relative;
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+.invisible{
+    display: none;
+}
+footer{
+    position: absolute;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* left: 50%; */
+    bottom: 0;
+    /* top: 50%; */
+}
