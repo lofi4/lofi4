@@ -135,6 +135,17 @@ lighter('web__image',3)
 webtextshow('webp',3)
 webtexthide('webp',3)
 
+function openLink (a,b){
+  let m= document.getElementById(a);
+  m.addEventListener('click',
+  function (){window.location.href = b} 
+  )}
+
+ openLink ('musinsa', 'D:\code\musinsa\musinsa.html') 
+ openLink ('sema', 'D:\code\musinsa\musinsa.html') 
+ openLink ('woders', 'D:\code\musinsa\musinsa.html') 
+ openLink ('city', 'D:\code\musinsa\musinsa.html') 
+
 // illust start
 
 
