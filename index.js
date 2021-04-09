@@ -143,7 +143,7 @@ function openLink (a,b){
 
  openLink ('musinsa', 'lofi4.github.io/musinsa/musinsa.html') 
  openLink ('sema', 'lofi4.github.io/sema/sema.html') 
- openLink ('woders', 'lofi4.github.io/wonders/wonders.html') 
+ openLink ('wonders', 'lofi4.github.io/wonders/wonders.html') 
  openLink ('city', 'lofi4.github.io/citygarden/city.html') 
 
 // illust start
