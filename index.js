@@ -141,10 +141,10 @@ function openLink (a,b){
   function (){window.location.href = b} 
   )}
 
- openLink ('musinsa', 'D:\code\musinsa\musinsa.html') 
- openLink ('sema', 'D:\code\musinsa\musinsa.html') 
- openLink ('woders', 'D:\code\musinsa\musinsa.html') 
- openLink ('city', 'D:\code\musinsa\musinsa.html') 
+ openLink ('musinsa', 'lofi4.github.io/musinsa/musinsa.html') 
+ openLink ('sema', 'lofi4.github.io/sema/sema.html') 
+ openLink ('woders', 'lofi4.github.io/wonders/wonders.html') 
+ openLink ('city', 'lofi4.github.io/citygarden/city.html') 
 
 // illust start
 
