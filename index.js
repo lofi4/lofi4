@@ -141,10 +141,10 @@ function openLink (a,b){
   function (){window.location.href = b} 
   )}
 
- openLink ('musinsa', 'lofi4.github.io/musinsa/musinsa.html') 
- openLink ('sema', 'lofi4.github.io/sema/sema.html') 
- openLink ('wonders', 'lofi4.github.io/wonders/wonders.html') 
- openLink ('city', 'lofi4.github.io/citygarden/city.html') 
+ openLink ('musinsa', 'https://lofi4.github.io/lofi4.github.io-musinsa/') 
+ openLink ('sema', 'https://lofi4.github.io/lofi4.github.io-sema/') 
+ openLink ('wonders', 'https://lofi4.github.io/lofi4.github.io-wonders/') 
+ openLink ('city', 'https://lofi4.github.io/lofi4.github.io-citi/') 
 
 // illust start
 
