@@ -19,11 +19,13 @@ buttonClick('home','main')
 buttonClick('first','one')
 
 
+
 function goBack() {
     let backButton = document.getElementById('goback')
     backButton.addEventListener('click',
-    window.history.back())
+    function () {window.history.back()})
   }
 
 
 
+  goBack()

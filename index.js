@@ -8,7 +8,6 @@ function getHeight(u) {
 
 getHeight('web_section')
 
-console.log(getHeight('web_section'))
 
 
 
@@ -48,32 +47,6 @@ var swiper = new Swiper('.swiper-container', {
   },
 });
   // swiper_end
-
-
-  
-function fadeOut(a){
-  var t=document.getElementById('intro__vid');
-  var m=document.getElementsByClassName(a)[0];
-  t.addEventListener('mouseenter', 
-  function () {m.style.opacity = "0%", 
-  console.log ('yee')
-  }
- )
-}
-
-function fadeIn(a){
-  var t=document.getElementById('intro__vid');
-  var m=document.getElementsByClassName(a)[0];
-  t.addEventListener('mouseout', 
-  function() {m.style.opacity = "100%"
-  }
- )
-}
-
-fadeOut('portf')
-fadeIn('portf')
-
-// intro js
 
 function darker(a , b){
   var m=document.getElementsByClassName('web__item')[b];
@@ -215,7 +188,6 @@ function swapIll() {
 function illCloseDown() {
       var b=document.getElementById('illustpopup');
       b.addEventListener ('click', ()=> {
-      console.log('gg') ;
       illpopDown ()
       })}
         
@@ -260,7 +232,6 @@ function swap3d() {
 function closeDown() {
       var b=document.querySelectorAll('.blender__big__container');
       b[0].addEventListener ('click', ()=> {
-      console.log('gg') ;
       popDown ()
       })}
         
@@ -275,13 +246,32 @@ let intro = document.getElementById('intro__vid');
 let second = document.getElementsByClassName('informvid')[0];
 let third = document.getElementsByClassName("thirdvid")[0];
 let fourth = document.getElementById('fall');
+let protf=document.getElementsByClassName('portf')[0]
 
 function playVid(a){
-  a.addEventListener('mouseenter',
+  a.addEventListener('mouseover',
   function (){a.play()}
   )}
 
+function playVid2(a){
+  protf.addEventListener('mouseover',
+    function (){a.play()}
+    )}
+
+function Hidebanner(){
+  intro.addEventListener('playing',
+  function () {protf.style.opacity='0%'}
+  )} 
+function Hidebanner2(){
+    intro.addEventListener('ended',
+    function () {protf.style.opacity='100%'}
+    )} 
+    
+
+Hidebanner()
+Hidebanner2()
 playVid(intro)
+playVid2(intro)
 playVid(second)
 playVid(third)
 playVid(fourth)

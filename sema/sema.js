@@ -18,15 +18,20 @@ function buttonClick(a,b){
 buttonClick('before','was')
 buttonClick('home','main')
 buttonClick('first','one')
+buttonClick('second','two')
 buttonClick('third','three')
 buttonClick('fourth','four')
 buttonClick('fifth','five')
-buttonClick('sixth','six')
+
+
 
 
 function goBack() {
     let backButton = document.getElementById('goback')
     backButton.addEventListener('click',
-    window.history.back())
+    function () {window.history.back()})
   }
 
+
+
+  goBack()
