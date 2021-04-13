@@ -15,6 +15,28 @@ a{
     color: rgb(255, 255, 255);
 }
 
+#lodingdiv{
+    margin: 0;
+    top: 0;
+    background-color: rgb(54, 54, 54);
+    /* position: absolute; */
+display: flex;
+width: 100vw;
+height: 100vh;
+justify-content: center;
+align-items: center;
+overflow-y: hidden;
+overflow-x: hidden;
+background-repeat: repeat;
+ background-image: url(/img/dot.png);
+ background-size: 5px;
+}
+#lodingvid{
+    mix-blend-mode: screen;
+    width: 20vh;
+    height: 20vh;
+    filter: blur(1px);
+}
 
 .navbar{
     z-index: 5;
@@ -79,21 +101,8 @@ main{
    background-repeat: repeat;
     background-image: url(/img/dot.png);
     background-size: 5px;
-    /* background-blend-mode: multiply; */
 }
 
-/* #background{
-    z-index: 0;
-    display: flex;
-    width: 10%;
-    height:10%;
-    position: absolute;
-    background-repeat: repeat;
-    background-image: url(/img/dot.png);
-    opacity: 20%;
-    mix-blend-mode: multiply;
-    
-} */
 
 .intro__container{
     position: relative;
@@ -203,10 +212,6 @@ main{
     /* transform: translate( -50%, -50% ); */
     opacity: 100%;
 }
-.portf:hover{
-    opacity: 0%;
-}
-
 
 /* metastart */
 .meta{
@@ -226,7 +231,6 @@ main{
     height: 20vh;
     filter: blur(1px) brightness(70%);
     mix-blend-mode: screen;
-
     }
 
 /* intro display */
@@ -241,52 +245,25 @@ main{
     flex-direction: column;
 }
 
-
 .black__box{
     top: 0%;
     position: relative;
     display: flex;
     opacity: 100%;
-    z-index: 1;
     height: 80vh;
     width: 100vw;
     justify-content:center;
     align-items: center;
-    
-
+    background: transparent;
 }
-.black__box>p{
-    z-index: 0;
+#backgroundmeta{
     mix-blend-mode:screen;
-    opacity: 100%;
     position: absolute;
-    font-size: 200px;
-    color: rgba(172, 172, 172, 0.11);
+    width: 80vh;
+    height: 80vh;
+    filter: blur(1px) brightness(60%);
+    
 }
-#web{
-    font-size: 100px;
-    /* color:#585858; */
-    top:0;
-    transform: translate(-70%, -10%);
-}
-#illust{
-    font-size: 160px;
-    /* color: #6d6d6d; */
-    transform: translate(80%, -0%);
-}
-#threeD{
-    font-size: 180px;
-    /* color: #464646; */
-    bottom: 0;
-    transform: translate(10%, 200%);
-}
-#Design{
-    font-size: 140px;
-    /* color: #808080; */
-    transform: translate(-120%, 500%);
-}
-
-
 
 .inform{
     z-index: 2;

@@ -276,3 +276,8 @@ playVid(second)
 playVid(third)
 playVid(fourth)
 
+function introHide(){
+  document.getElementById('lodingdiv').style.display='none'
+}
+
+window.onload = function(){introHide()};
