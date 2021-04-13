@@ -193,24 +193,25 @@ main{
     margin: 0;
     padding: 0;
     position: absolute;
-    font-size: 5vh;
-    top: 47%;
-    /* left: 50%; */
+    font-size:4vh;
+    top:50vh;
+    object-fit: scale-down;
     height: auto;
-    width: 45vh;
-    /* padding-left: 5vmin;
-    padding-right: 5vmin; */
-    background-color:  rgb(54, 54, 54);
+    width: fit-content;
+    /* background-color:  rgb(54, 54, 54); */
     letter-spacing:5px;
     text-align: center;
     text-transform: uppercase;
     color: rgb(255, 255, 255);
     line-height: normal;
-    /* mix-blend-mode:multiply; */
+    mix-blend-mode:difference;
     transition:all 1s;
     font-weight: 900;
-    /* transform: translate( -50%, -50% ); */
     opacity: 100%;
+    transform: translate(0%, -30%);
+    /* background-repeat: repeat;
+    background-image: url(/img/dot.png);
+    background-size: 5px; */
 }
 
 /* metastart */
@@ -224,8 +225,20 @@ main{
     /* padding-bottom: 15vh; */
     
 }
+.metap{
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 2vh;
+    position: absolute;
+    color: white;
+}
+#metap1{
+    top: 10%;
+}
+#metap2{
+    bottom:10%;
+}
 .metaball{
-    /* position: absolute; */
+    position: absolute;
     /* border-radius: vmin; */
     width: 20vw;
     height: 20vh;

@@ -1,5 +1,4 @@
 
-
 function getHeight(u) {
   let m = document.getElementsByClassName(u)[0];
 
@@ -7,8 +6,6 @@ function getHeight(u) {
 }
 
 getHeight('web_section')
-
-
 
 
 let navIntro=document.getElementById('nav__intro')
