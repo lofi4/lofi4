@@ -286,13 +286,10 @@ playVid(fourth)
 function introHide(){
   document.getElementById('lodingdiv').style.display='none'
 }
-function scrollHide(){
-  window.style.overflow = 'hidden'
-}
-function scrollVisible(){document.body.style.overflow = 'visible'}
+// function scrollHide(){
+//   window.style.overflow = 'hidden'
+// }
+// function scrollVisible(){document.body.style.overflow = 'visible'}
 
-document.body.style.overflow = 'hidden';
-window.onload = ()=> {
-introHide();
-scrollVisible()}
-
+// document.body.style.overflow = 'hidden';
+window.onload = function() {introHide()};
