@@ -1,7 +1,12 @@
 function introHide(){
   document.getElementById('lodingdiv').style.display='none'
 }
-window.onload = function() {introHide()};
+
+function scrollZero() {window.scrollTo({top:0, left:0})}
+
+window.onload = ()=>
+introHide(),
+scrollZero()
 
 function getHeight(u) {
   let m = document.getElementsByClassName(u)[0];
