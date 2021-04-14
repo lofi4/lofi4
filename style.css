@@ -16,10 +16,11 @@ a{
 }
 
 #lodingdiv{
+    z-index: 5;
+    position: fixed;
     margin: 0;
     top: 0;
     background-color: rgb(54, 54, 54);
-    /* position: absolute; */
 display: flex;
 width: 100vw;
 height: 100vh;
@@ -198,7 +199,7 @@ main{
     top:50vh;
     object-fit: scale-down;
     height: auto;
-    width: fit-content;
+    width: 100vw;
     /* background-color:  rgb(54, 54, 54); */
     letter-spacing:5px;
     text-align: center;
@@ -217,14 +218,14 @@ main{
 
 /* metastart */
 .meta{
-    padding-top: 10vh;
+    padding-top: 15vh;
     position: relative;
     display: flex;
     width: 100vw;
-    height: 40vh;
+    height: auto;
     justify-content: center;
     align-items: center;
-    /* padding-bottom: 15vh; */
+    padding-bottom: 10vh;
     
 }
 /* .metap{
@@ -242,7 +243,7 @@ main{
 .metaball{
     position: absolute;
     /* border-radius: vmin; */
-    width: 100vw;
+    width: auto;
     height: 20vh;
     filter: blur(1px) brightness(90%);
     mix-blend-mode: screen;
