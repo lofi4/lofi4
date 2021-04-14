@@ -7,6 +7,16 @@ function getHeight(u) {
 
 getHeight('web_section')
 
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementsByClassName("navbar")[0].style.top = "0";
+  } else {
+    document.getElementsByClassName("navbar")[0].style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
 
 let navIntro=document.getElementById('nav__intro')
 let navUx=document.getElementById('nav__ux')
@@ -240,8 +250,8 @@ swap3d()
 // videioset
 
 let intro = document.getElementById('intro__vid');
-let second = document.getElementsByClassName('informvid')[0];
-let third = document.getElementsByClassName("thirdvid")[0];
+// let second = document.getElementsByClassName('informvid')[0];
+// let third = document.getElementsByClassName("thirdvid")[0];
 let fourth = document.getElementById('fall');
 let protf=document.getElementsByClassName('portf')[0]
 
@@ -269,12 +279,20 @@ Hidebanner()
 Hidebanner2()
 playVid(intro)
 playVid2(intro)
-playVid(second)
-playVid(third)
+// playVid(second)
+// playVid(third)
 playVid(fourth)
 
 function introHide(){
   document.getElementById('lodingdiv').style.display='none'
 }
+function scrollHide(){
+  window.style.overflow = 'hidden'
+}
+function scrollVisible(){document.body.style.overflow = 'visible'}
 
-window.onload = function(){introHide()};
+document.body.style.overflow = 'hidden';
+window.onload = ()=> {
+introHide();
+scrollVisible()}
+

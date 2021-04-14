@@ -47,6 +47,7 @@ background-repeat: repeat;
     opacity: 100%;
     background-color: rgba(0, 0, 0, 0.151);
     backdrop-filter:blur(5px);
+    transition: .5s;
     /* justify-content: center; */
     /* align-content: center; */
 }
@@ -216,6 +217,7 @@ main{
 
 /* metastart */
 .meta{
+    padding-top: 10vh;
     position: relative;
     display: flex;
     width: 100vw;
@@ -225,7 +227,7 @@ main{
     /* padding-bottom: 15vh; */
     
 }
-.metap{
+/* .metap{
     font-family: 'Nanum Myeongjo', serif;
     font-size: 2vh;
     position: absolute;
@@ -236,13 +238,13 @@ main{
 }
 #metap2{
     bottom:10%;
-}
+} */
 .metaball{
     position: absolute;
     /* border-radius: vmin; */
-    width: 20vw;
+    width: 100vw;
     height: 20vh;
-    filter: blur(1px) brightness(70%);
+    filter: blur(1px) brightness(90%);
     mix-blend-mode: screen;
     }
 
@@ -251,7 +253,7 @@ main{
     position: relative;
     margin-top: 0;
     display: flex;
-    height: 170vh;
+    height: 80vh;
     width: 100vw;
     justify-content: center;
     align-items: center;
@@ -362,14 +364,14 @@ width: 5vmin;
     justify-content: center;
     align-items: center;
     top: 0;
-    height: 100vh;
+    height: 80vh;
     width: 100vw; 
     transition: all 0.5s ;
     }
 .informvid{
     position: absolute;
     display: flex;
-    height: 80vh;
+    height: 60vh;
     width: auto;
 }
 .minmal__text1{
@@ -464,15 +466,14 @@ width: 5vmin;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 15%;
-    height: 120vh;
+    height: 80vh;
     width: 100vw; 
     transition: all 0.5s ;
     }
 .thirdvid{
     position: absolute;
     display: flex;
-    height: 80vh;
+    height: 60vh;
     width: auto;
 }
 
@@ -484,7 +485,7 @@ width: 5vmin;
     width: 100vw;
     justify-content: center;
     align-items: center;
-    padding-top: 20vh;
+    padding-top: 10vh;
     /* padding-bottom: 5vmin; */
     
 }
@@ -492,7 +493,7 @@ width: 5vmin;
     position: absolute;
     color: #fff;
     font-size:  2vh;
-    top: 20vh;
+    top: 10vh;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -595,7 +596,7 @@ height:100vh;
 justify-content: center;
 align-items: center;
 /* background-color: rgb(0, 0, 0); */
-padding-top: 20vh;
+padding-top: 10vh;
 /* padding-bottom: 15vmin; */
 position: relative;
 
@@ -604,7 +605,7 @@ position: relative;
     position: absolute;
     color: #fff;
     font-size:  2vh;
-    top: 20vh;
+    top: 10vh;
     left: 50%;
     transform: translate(-50%, -50%);
     /* align-items: center; */
@@ -737,13 +738,22 @@ position: relative;
 
 #Email{
     font-size:2vh;
-    padding-right: 40px;
+    /* padding-right: 40px; */
     text-align:center ;
     color: #fff;
     position: relative;
-margin-bottom: 15vmin;
-padding-right: 0;
+    align-items: center;
+/* margin-bottom: 15vmin; */
+/* padding-right: 0; */
 
+}
+footer{
+    justify-content: center;
+    height: 30vh;
+    display: flex;
+    mix-blend-mode:screen;
+    position: relative;
+    align-items: center;
 }
 
 /* scroll */
