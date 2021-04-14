@@ -1,3 +1,7 @@
+function introHide(){
+  document.getElementById('lodingdiv').style.display='none'
+}
+window.onload = function() {introHide()};
 
 function getHeight(u) {
   let m = document.getElementsByClassName(u)[0];
@@ -283,13 +287,3 @@ playVid2(intro)
 // playVid(third)
 playVid(fourth)
 
-function introHide(){
-  document.getElementById('lodingdiv').style.display='none'
-}
-// function scrollHide(){
-//   window.style.overflow = 'hidden'
-// }
-// function scrollVisible(){document.body.style.overflow = 'visible'}
-
-// document.body.style.overflow = 'hidden';
-window.onload = function() {introHide()};
