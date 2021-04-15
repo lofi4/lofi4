@@ -101,7 +101,7 @@ main{
    overflow-y: hidden;
    overflow-x: hidden;
    background-repeat: repeat;
-    background-image: url(/img/dot.png);
+    background-image: url(/portfoliomain/img/dot.png);
     background-size: 5px;
 }
 
