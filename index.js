@@ -1,31 +1,3 @@
-function introHide(){
-  document.getElementById('lodingdiv').style.display='none'
-}
-
-function scrollZero() {window.scrollTo({top:0, left:0})}
-
-window.onload = ()=>
-introHide(),
-scrollZero()
-
-function getHeight(u) {
-  let m = document.getElementsByClassName(u)[0];
-
-  return m.offsetTop
-}
-
-getHeight('web_section')
-
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementsByClassName("navbar")[0].style.top = "0";
-  } else {
-    document.getElementsByClassName("navbar")[0].style.top = "-50px";
-  }
-  prevScrollpos = currentScrollPos;
-}
 
 let navIntro=document.getElementById('nav__intro')
 let navUx=document.getElementById('nav__ux')
@@ -33,235 +5,95 @@ let navIll=document.getElementById('nav__ill')
 let nav3d=document.getElementById('nav__3d')
 let navCon=document.getElementById('nav__con')
 
+let swiperCon = document.getElementsByClassName('.swiper-wrapper')[0]
+let main = document.getElementById('main')
+
+function getHeight(u) {
+
+  let m = document.getElementById(u);
+  return m.offsetTop
+}
+
+
+
 function navMove (a,b){
   a.addEventListener('click', 
-    function (){window.scrollTo({top:b, left:0, behavior:'smooth'})}
-    )
-}
+    function ()
+    {window.scrollTo({top:b, left:0, behavior:'smooth'})}
+    )}
 
-navMove(navIntro,0)
-navMove(navUx,getHeight('web_section'))
-navMove(navIll,getHeight('illust__wrap'))
-navMove(nav3d,getHeight('blender__wrap'))
+// navMove(navIntro,0)
+navMove(navIntro,getHeight('second'))
+navMove(navUx,getHeight('third'))
+navMove(navIll,getHeight('fourth'))
+navMove(nav3d,getHeight('sixth'))
 navMove(navCon,20000)
 
+// navend
 
-// swiper_start
-var swiper = new Swiper('.swiper-container', {
-  slidesPerView: 5,
-  spaceBetween: 10,
-  slidesPerGroup: 5,
-  loop: true,
-  loopFillGroupWithBlank: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
-  // swiper_end
-
-function darker(a , b){
-  var m=document.getElementsByClassName('web__item')[b];
-  var t=document.getElementsByClassName(a)[b];
-  m.addEventListener ('mouseover', 
-  function brightness(){
-    if (t.style.filter == "brightness(50%)")
-    {t.style.filter = "none"}
-    else (t.style.filter = "brightness(50%)")
-  })}
+function introHide(){
+    document.getElementById('lodingdiv').style.display='none'
+  }
   
-function lighter(a , b){
-  var m=document.getElementsByClassName('web__item')[b];
-  var t=document.getElementsByClassName(a)[b];
-  m.addEventListener ('mouseout', 
-  function brightness(){
-    if (t.style.filter == "brightness(50%)")
-    {t.style.filter = "none"}
-    else (t.style.filter = "brightness(50%)")
-  })}
+  function scrollZero() {window.scrollTo({top:0, left:0})}
+  
+  window.onload = ()=>
+  introHide(),
+  scrollZero()
+// loading  
 
-function webtextshow(a,b){
-  var m=document.getElementsByClassName('web__item')[b];
-  var t=document.getElementsByClassName(a)[b];
-  m.addEventListener ('mouseover',
-  function (){
-  if (t.style.display == "flex"){
-    t.style.display = "none"}
-  else (t.style.display = "flex")
-  })}
+let dragVid = document.getElementById('dragvid')
+let navMenu= document.getElementsByClassName('navbar')[0]
 
-function webtexthide(a,b){
-  var m=document.getElementsByClassName('web__item')[b];
-  var t=document.getElementsByClassName(a)[b];
-  m.addEventListener ('mouseout',
-  function (){
-  if (t.style.display == "flex"){
-    t.style.display = "none"}
-  else (t.style.display = "flex")
-   })}
-
-darker('web__image',0)
-lighter('web__image',0)
-webtextshow('webp',0)
-webtexthide('webp',0)
-
-darker('web__image',1)
-lighter('web__image',1)
-webtextshow('webp',1)
-webtexthide('webp',1)
-
-darker('web__image',2)
-lighter('web__image',2)
-webtextshow('webp',2)
-webtexthide('webp',2)
-
-darker('web__image',3)
-lighter('web__image',3)
-webtextshow('webp',3)
-webtexthide('webp',3)
-
-function openLink (a,b){
-  let m= document.getElementById(a);
-  m.addEventListener('click',
-  function (){window.location.href = b} 
-  )}
-
- openLink ('musinsa', 'https://lofi4.github.io/musinsa/') 
- openLink ('sema', 'https://lofi4.github.io/sema/') 
- openLink ('wonders', 'https://lofi4.github.io/wonders/') 
- openLink ('city', 'https://lofi4.github.io/citygarden/') 
-
-// illust start
-
-
-function illustin () {
-  let ill=document.querySelectorAll('.ill__item');
-  var i;
-  for (i = 0; i < ill.length; i++) {
-  ill[i].addEventListener ('mouseover',
-    function () {
-      if (this.style.filter == "brightness(50%)")
-      {this.style.filter = "none"}
-      else (this.style.filter = "brightness(50%)")
-  })}}
-
-  function illustout () {
-    let ill=document.querySelectorAll('.ill__item');
-    var i;
-    for (i = 0; i < ill.length; i++) {
-    ill[i].addEventListener ('mouseout',
-      function () {
-        if (this.style.filter == "brightness(50%)")
-        {this.style.filter = "none"}
-        else (this.style.filter = "brightness(50%)")
-    })}}
-
-function swap() {
-  var s=document.querySelectorAll('.ill__item');
-  var b=document.querySelectorAll('.illust__item__big');
-    var i;
-    for (i = 0; i < s.length; i++) {
-    s[i].addEventListener ('mouseover',
-    function() {b[0].src = this.src
-    })}}
-
-swap()
-
-function illpopDown(){
-  var b=document.getElementById('illustpopup');
-  b.style.display='none';
-}
-
-function illsrcChange(){
-  var s=document.querySelectorAll('.ill__item');
-  var b=document.getElementById('illustpopupimg');
-    var i;
-    for (i = 0; i < s.length; i++) {b[0].src = s[i].src}
-}
-
-function swapIll() {
-  var s=document.querySelectorAll('.ill__item');
-  var b=document.getElementById('illustpopupimg');
-    var i;
-    for (i = 0; i < s.length; i++) {
-    s[i].addEventListener ('click', 
-    function illsrcChange () {b.src = this.src}
-    )}}
-
-    function illPopUp() {
-      var s=document.querySelectorAll('.ill__item');
-      var b=document.getElementById('illustpopup');
-        var i;
-        for (i = 0; i < s.length; i++) {
-        s[i].addEventListener ('click', 
-        function (){b.style.display='flex';
-      })}}
-
-function illCloseDown() {
-      var b=document.getElementById('illustpopup');
-      b.addEventListener ('click', ()=> {
-      illpopDown ()
-      })}
-        
-swapIll ()
-illPopUp ()
-illCloseDown ()
-
-
-
-// 3d start
-
-function popDown(){
-  var b=document.querySelectorAll('.blender__big__container');
-  b[0].style.display='none';
-}
-
-function srcChange(){
-  var s=document.querySelectorAll('.blender__img');
-  var b=document.querySelectorAll('.blender__big');
-    var i;
-    for (i = 0; i < s.length; i++) {b[0].src = s[i].src}
-}
-
-function swap3d() {
-  var s=document.querySelectorAll('.blender__img');
-  var b=document.querySelectorAll('.blender__big');
-    var i;
-    for (i = 0; i < s.length; i++) {
-    s[i].addEventListener ('click', 
-    function srcChange () {b[0].src = this.src}
-    )}}
-
-    function popUp() {
-      var s=document.querySelectorAll('.blender__img');
-      var b=document.querySelectorAll('.blender__big__container');
-        var i;
-        for (i = 0; i < s.length; i++) {
-        s[i].addEventListener ('click', 
-        function (){b[0].style.display='flex';
-      })}}
-
-function closeDown() {
-      var b=document.querySelectorAll('.blender__big__container');
-      b[0].addEventListener ('click', ()=> {
-      popDown ()
-      })}
-        
+function rotatePoint1(){
+    navMenu.addEventListener('mouseenter',
+    function (){dragVid.play()})}
     
-closeDown()
-popUp ()
-swap3d()
 
-// videioset
+function rotatePoint2(){
+        navMenu.addEventListener('mouseleave',
+        function (){dragVid.play()})}
+        
+rotatePoint1()
+rotatePoint2()
 
-let intro = document.getElementById('intro__vid');
-// let second = document.getElementsByClassName('informvid')[0];
-// let third = document.getElementsByClassName("thirdvid")[0];
-let fourth = document.getElementById('fall');
+const introPage = document.getElementsByClassName('introscroll')[0];
+const secondCard = document.getElementById('secondcard')
+
+const firstPage = document.getElementById('firstPage')
+const secondPage = document.getElementById('secondPage')
+const thirdPage = document.getElementById('thirdPage')
+
+const introSection = document.getElementById('intro')
+const skillSection = document.getElementById('skill')
+const contectSection = document.getElementById('contect')
+
+function skillScroll(){
+    skillSection.addEventListener('click',
+    function (){ 
+       secondCard.scrollTo(0, secondCard.clientHeight);
+    })}
+
+    function introScroll(){
+        introSection.addEventListener('click',
+        function (){ 
+        secondCard.scrollTo(0, 0)
+        })}
+        
+        function contectScroll(){
+            contectSection.addEventListener('click',
+            function (){ 
+                secondCard.scrollTo(0, 5000)
+            })}
+   
+   
+introScroll()
+skillScroll()
+contectScroll()
+// scrollset
+
+let intro = document.getElementById('introvid');
+let last = document.getElementById('lastvid');
 let protf=document.getElementsByClassName('portf')[0]
 
 function playVid(a){
@@ -288,7 +120,155 @@ Hidebanner()
 Hidebanner2()
 playVid(intro)
 playVid2(intro)
-// playVid(second)
-// playVid(third)
-playVid(fourth)
+playVid(last)
 
+// popupset
+
+let bigCon1=document.getElementById('bigcontainer1');
+let bigImg1=document.getElementById('bigimg1');
+let bigCon2=document.getElementById('bigcontainer2');
+let bigImg2=document.getElementById('bigimg2');
+let bigCon3=document.getElementById('bigcontainer3');
+let bigImg3=document.getElementById('bigimg3');
+
+let vector=document.querySelectorAll('.vector');
+let illust=document.querySelectorAll('.illust');
+let blenderImg=document.querySelectorAll('.blender__img');
+
+function popDown(bigcon){
+    bigcon.style.display='none';
+  }
+  function swap3d(img,bigimg) {
+      var i;
+      for (i = 0; i < img.length; i++) {
+      img[i].addEventListener ('click', 
+      function srcChange () {bigimg.src = this.src}
+      )}}
+  
+      function popUp(img,bigcon) {
+          var i;
+          for (i = 0; i < img.length; i++) {
+          img[i].addEventListener ('click', 
+          function (){bigcon.style.display='flex';
+        })}}
+  
+  function closeDown(bigcon) {
+        bigcon.addEventListener ('click', ()=> {
+        popDown (bigcon)
+        })}
+
+function illustIn (smallImg) {
+            var i;
+            for (i = 0; i < smallImg.length; i++) {
+            smallImg[i].addEventListener ('mouseover',
+              function () {
+                if (this.style.filter == "brightness(70%)")
+                {this.style.filter = "none"}
+                else (this.style.filter = "brightness(70%)")
+            })}}
+          
+            function illustOut (smallImg) {
+
+              var i;
+              for (i = 0; i < smallImg.length; i++) {
+              smallImg[i].addEventListener ('mouseout',
+                function () {
+                  if (this.style.filter == "brightness(70%)")
+                  {this.style.filter = "none"}
+                  else (this.style.filter = "brightness(70%)")
+              })}}
+
+illustIn(vector)
+illustOut(vector)
+illustIn(illust)
+illustOut(illust)
+illustIn(blenderImg)
+illustOut(blenderImg)
+
+
+          
+  closeDown(bigCon1)
+  popUp (vector,bigCon1)
+  swap3d(vector,bigimg1)
+  
+          
+  closeDown(bigCon2)
+  popUp (illust,bigCon2)
+  swap3d(illust,bigimg2)
+  
+            
+  closeDown(bigCon3)
+  popUp (blenderImg,bigCon3)
+  swap3d(blenderImg,bigimg3)
+
+
+let preButton=document.getElementById('leftarrow')
+let nextButton=document.getElementById('rightarrow')
+
+// function prev(a){
+//   var i;
+//   for (i = 0; i < img.length; i++)
+//   a.scr[i]=a.src[i--]
+// }  
+
+function vectorId(a) {return (document.getElementById('v'+(a)))}
+
+
+
+
+//  function prevPage(a){
+//   a.addEventListener('click',
+//   function prev(vector){})}
+ 
+// nextPage(nextButton,1)
+
+
+//   popupend
+
+
+function openLink (a,b){
+    let m= document.getElementById(a);
+    m.addEventListener('click',
+    function (){window.location.href = b} 
+    )}
+  
+   openLink ('musinsa', 'https://lofi4.github.io/musinsa/') 
+   openLink ('sema', 'https://lofi4.github.io/sema/') 
+   openLink ('wonders', 'https://lofi4.github.io/wonders/') 
+   openLink ('city', 'https://lofi4.github.io/citygarden/') 
+
+
+
+   function Clipboard_CopyTo(value) {
+    var tempInput = document.createElement("input");
+    tempInput.value = value;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+  }
+  
+  
+
+  document.querySelector('#Copy1').onclick = function() {
+    Clipboard_CopyTo('lofi4mailbox@gmail.com');
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: "Thank you!",
+      text:"Email Copyed!",
+      showConfirmButton: false,
+      timer: 1500
+    });
+  }
+  document.querySelector('#Copy2').onclick = function() {
+    Clipboard_CopyTo('lofi4mailbox@gmail.com');
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: "Thank you!",
+      text:"Email Copyed!",
+      showConfirmButton: false,
+      timer: 1500
+    });
+  }
