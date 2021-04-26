@@ -2,6 +2,7 @@
 let navIntro=document.getElementById('nav__intro')
 let navUx=document.getElementById('nav__ux')
 let navIll=document.getElementById('nav__ill')
+let navCha=document.getElementById('nav__cha')
 let nav3d=document.getElementById('nav__3d')
 let navCon=document.getElementById('nav__con')
 
@@ -26,6 +27,7 @@ function navMove (a,b){
 navMove(navIntro,getHeight('second'))
 navMove(navUx,getHeight('third'))
 navMove(navIll,getHeight('fourth'))
+navMove(navCha,getHeight('characterwrap'))
 navMove(nav3d,getHeight('sixth'))
 navMove(navCon,20000)
 
@@ -130,10 +132,13 @@ let bigCon2=document.getElementById('bigcontainer2');
 let bigImg2=document.getElementById('bigimg2');
 let bigCon3=document.getElementById('bigcontainer3');
 let bigImg3=document.getElementById('bigimg3');
+let bigCon4=document.getElementById('bigcontainer4');
+let bigImg4=document.getElementById('bigimg4');
 
 let vector=document.querySelectorAll('.vector');
 let illust=document.querySelectorAll('.illust');
 let blenderImg=document.querySelectorAll('.blender__img');
+let characterImg=document.querySelectorAll('.characterImg');
 
 function popDown(bigcon){
     bigcon.style.display='none';
@@ -184,7 +189,8 @@ illustIn(illust)
 illustOut(illust)
 illustIn(blenderImg)
 illustOut(blenderImg)
-
+illustIn(characterImg)
+illustOut(characterImg)
 
           
   closeDown(bigCon1)
@@ -201,26 +207,9 @@ illustOut(blenderImg)
   popUp (blenderImg,bigCon3)
   swap3d(blenderImg,bigimg3)
 
-
-let preButton=document.getElementById('leftarrow')
-let nextButton=document.getElementById('rightarrow')
-
-// function prev(a){
-//   var i;
-//   for (i = 0; i < img.length; i++)
-//   a.scr[i]=a.src[i--]
-// }  
-
-function vectorId(a) {return (document.getElementById('v'+(a)))}
-
-
-
-
-//  function prevPage(a){
-//   a.addEventListener('click',
-//   function prev(vector){})}
- 
-// nextPage(nextButton,1)
+  closeDown(bigCon4)
+  popUp (characterImg,bigCon4)
+  swap3d(characterImg,bigimg4)
 
 
 //   popupend

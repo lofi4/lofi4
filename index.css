@@ -38,7 +38,7 @@ background-repeat: repeat;
         position: absolute;
         display: flex;
         justify-content: center;
-        height: 700vh;
+        height: 800vh;
         width: 100vw;
         flex-flow:column nowrap;
         background-color: rgb(54, 54, 54);
@@ -552,6 +552,24 @@ width: 5vmin;
 
 
 .illust{
+    cursor: pointer;
+    object-fit: cover;
+    width: 15vh;
+    height: 15vh;
+}
+
+#charactercon{
+    background-color: transparent;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(5, 15vh);
+    grid-column-gap: 10px;
+    grid-template-rows: repeat(3, 15vh);
+    grid-row-gap: 10px;
+}
+
+.characterImg{
     cursor: pointer;
     object-fit: cover;
     width: 15vh;
