@@ -118,14 +118,15 @@ function Hidebanner2(){
     )} 
     
 
-Hidebanner()
-Hidebanner2()
-playVid(intro)
-playVid2(intro)
+// Hidebanner()
+// Hidebanner2()
+// playVid(intro)
+// playVid2(intro)
 playVid(last)
 
 // popupset
-
+let bigCon0=document.getElementById('bigcontainer0');
+let bigImg0=document.getElementById('bigimg0');
 let bigCon1=document.getElementById('bigcontainer1');
 let bigImg1=document.getElementById('bigimg1');
 let bigCon2=document.getElementById('bigcontainer2');
@@ -135,6 +136,7 @@ let bigImg3=document.getElementById('bigimg3');
 let bigCon4=document.getElementById('bigcontainer4');
 let bigImg4=document.getElementById('bigimg4');
 
+let ani=document.querySelectorAll('.animation');
 let vector=document.querySelectorAll('.vector');
 let illust=document.querySelectorAll('.illust');
 let blenderImg=document.querySelectorAll('.blender__img');
@@ -150,7 +152,7 @@ function popDown(bigcon){
       function srcChange () {bigimg.src = this.src}
       )}}
   
-      function popUp(img,bigcon) {
+  function popUp(img,bigcon) {
           var i;
           for (i = 0; i < img.length; i++) {
           img[i].addEventListener ('click', 
@@ -183,6 +185,9 @@ function illustIn (smallImg) {
                   else (this.style.filter = "brightness(70%)")
               })}}
 
+              
+illustIn(ani)
+illustOut(ani)
 illustIn(vector)
 illustOut(vector)
 illustIn(illust)
@@ -192,6 +197,10 @@ illustOut(blenderImg)
 illustIn(characterImg)
 illustOut(characterImg)
 
+      
+closeDown(bigCon0)
+popUp (ani,bigCon0)
+swap3d(ani,bigimg0)
           
   closeDown(bigCon1)
   popUp (vector,bigCon1)
@@ -221,10 +230,10 @@ function openLink (a,b){
     function (){window.location.href = b} 
     )}
   
-   openLink ('musinsa', 'https://lofi4.github.io/musinsa/') 
-   openLink ('sema', 'https://lofi4.github.io/sema/') 
-   openLink ('wonders', 'https://lofi4.github.io/wonders/') 
-   openLink ('city', 'https://lofi4.github.io/citygarden/') 
+  //  openLink ('musinsa', 'https://lofi4.github.io/musinsa/') 
+  //  openLink ('sema', 'https://lofi4.github.io/sema/') 
+  //  openLink ('wonders', 'https://lofi4.github.io/wonders/') 
+  //  openLink ('city', 'https://lofi4.github.io/citygarden/') 
 
 
 
